@@ -1,19 +1,20 @@
 var assert = require('assert');
 
-import sonon from sinon
+import sinon from 'sinon';
 
 describe('Promise', function () {
+
     function promise(onSuccess) {
         return Promise.resolve(42).then(onSuccess)
     }
 
     let flag = 0
-    
+
     beforeEach(function () {
         flag = 0
     })
 
-    let callback = sinin.stab()
+    let callback = sinon.stub()
     it('callback works', function () {
         assert.equal(flag, 0)
         callback()
